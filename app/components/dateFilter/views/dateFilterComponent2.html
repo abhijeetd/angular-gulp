@@ -1,0 +1,38 @@
+	<div class="floating-box filterDiv" style="margin-bottom: 15px;">
+		<div id="filterDiv" ng-controller="dateFilterController as ctrl">		
+		
+			<span><form class="form-inline">
+				<select ng-model="selectedOption" ng-options="o for o in options" class="form-control pull-left" style="width:130px;margin-top: 7px; margin-left:25px;">
+				{{selectedOption}}</select>
+				<div ng-show="dateControlVisible" style="display:inline-block;">
+					<span class="form-group">
+				<label class="col-sm-2 control-label">From</label>
+				<div class="col-sm-4" style="left:14px;" > 
+				<p class="input-group" style="width:250px;">			
+				<input type="text" class="form-control" datetime-picker="MM/dd/yyyy HH:mm" ng-model="ctrl.picker5.date" is-closed="ctrl.picker5.closed" is-open="ctrl.picker5.open"  datepicker-options="ctrl.picker5.datepickerOptions" close-on-selection="true" />
+				<span class="input-group-btn"> 
+				<button type="button" class="btn btn-default" ng-click="ctrl.openCalendar($event, 'picker5')"><i class="fa fa-calendar"></i></button>
+				</span>
+					</p>
+				</div>
+				</span>
+				<span class="form-group" style="display:inline-block; width:250px;">
+				<label class="col-sm-2 control-label">To</label>
+				<div class="col-sm-4">    
+				<p class="input-group" style="width:250px;">            
+                    <input type="text" class="form-control" ng-model="ctrl.picker6.date" datetime-picker="MM/dd/yyyy HH:mm" is-closed="ctrl.picker6.closed" ng-model="ctrl.picker6.date" close-on-selection="true" is-open="ctrl.picker6.open" />
+              <span class="input-group-btn">
+                  <button type="button" class="btn btn-default" ng-click="ctrl.openCalendar($event, 'picker6')"><i class="fa fa-calendar"></i></button>
+				</span>
+				</p>
+		</div>
+		</span>
+	</div>
+	<span><span id="dateTimeHourDiv" class="custom" style="display:none;"></span>
+	<span style="margin-left: 65px;margin-top: 10px;"><button type="button" ng-click="ctrl.filterGo();" class="btn btn-primary">Go</button></span>
+	</span>	</form>	</span>
+
+</div>
+
+
+</div>

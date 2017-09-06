@@ -1,0 +1,7 @@
+{"status":"SUCCESS","data":[	
+	{"device_id":"30ae3e11-0c35-4cb4-ab4a-b9c2d0d9b91c","fleet_id":"persistent-test-1","count":2},
+	{"device_id":"30ae3e10-0c35-4cb4-ab4a-b9c2d0d9b91c","fleet_id":"persistent-test-1","count":2},
+	{"device_id":"30ae3e10-0c35-4cb4-ab4a-b9c2d0d9b91d","fleet_id":"persistent-test-1","count":1},
+	{"device_id":"30ae3e10-0c35-4cb4-ab4a-b9c2d0d9b91h","fleet_id":"persistent-test-1","count":1},
+	{"device_id":"2de68de9-b348-4336-bdda-40ddff574230","fleet_id":"persistent-test-4","count":1}]}
+	

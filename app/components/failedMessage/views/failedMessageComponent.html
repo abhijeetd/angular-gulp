@@ -1,0 +1,36 @@
+ <div class="floating-box failedMessages" style="margin-bottom: 15px;margin-left: 8px;">Failed Messages
+ 
+ 			<span style="left:180px;position: relative; display: inline-block;" >
+			<select ng-model="selectedOption" ng-options="o for o in options" class="form-control" style="width:120px;margin-top: 0px;">
+			{{selectedOption}}</select>
+			</span>
+
+<span class="btn-group pull-right" data-ng-init="showp=true">
+ 
+<button class="btn btn-primary fa fa-bars" ng-click="showp=true; shown=false" style="font-size:18px" ></button>
+<button class="btn btn-primary fa fa-bar-chart" ng-click="showp=false; shown=true" style="font-size:18px" ></button>
+</span>
+
+<div ng-hide="shown" ng-show="showp" >
+<table st-table="$ctrl.rowCollection" class="table table-hover" style="font-size: 12px;" >
+	<thead>
+	<tr>
+		<th st-sort="fleet_id"></th>
+		<th st-sort="count" st-skip-natural="true" ></th>
+	</tr>
+	</thead>
+	<tbody>
+	<tr ng-repeat="$row in $ctrl.rowCollection"  >
+		<!--<td >	 <input ng-change="listMessages()"  ng-model="$ctrl.fleet_id" /> <button ng-click="listMessages({{$ctrl.fleet_id}})" > B </button></td> -->
+		<td ng-click="listMessages($row.fleet_id);"  ng-model="fleetid" fleetid="{{$row.fleet_id}}" >{{$row.fleet_id | lowercase}}</td>
+		<td >{{$row.count}}</td>
+	</tr>
+	</tbody>
+</table> </div>
+
+<div ng-hide="showp" ng-show="shown">
+<div>
+<canvas id="bar" class="chart chart-bar"
+  chart-series="$ctrl.series" chart-data="$ctrl.data" chart-labels="$ctrl.labels" chart-options="$ctrl.options" chart-colors="$ctrl.colors"
+  >
+</canvas><div> </div>

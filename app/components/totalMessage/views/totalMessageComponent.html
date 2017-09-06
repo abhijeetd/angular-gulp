@@ -1,0 +1,20 @@
+<div class="floating-box totalmessages" style="margin-bottom: 15px; margin-right: 8px;">Total Messages
+<span class="btn-group pull-right" data-ng-init="showp=true">
+		<button class="btn btn-primary " ng-click="showp=false; shown=true">%</button> 
+		<button class="btn btn-primary" ng-click="showp=true; shown=false">#</button>	
+
+		 </span>
+		
+		<div ng-hide="shown" ng-show="showp" ><canvas id="doughnut" class="chart chart-doughnut"
+	chart-data="$ctrl.data" chart-labels="$ctrl.labels" chart-options="$ctrl.options" chart-colors="$ctrl.colors" >
+	</canvas></div>
+
+		<div ng-hide="showp" ng-show="shown">
+			
+			<div ><canvas id="doughnuts" class="chart chart-doughnut"
+	chart-data="$ctrl.data2" chart-labels="$ctrl.labels" chart-options="$ctrl.options2" chart-colors="$ctrl.colors" >
+			
+			
+			</div></div></div>
+	
+

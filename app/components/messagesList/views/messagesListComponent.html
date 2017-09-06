@@ -1,0 +1,21 @@
+<div> 
+<table st-table="$ctrl.rowCollection" class="table table-hover" style="font-size: 13px;" >
+	<thead>
+	<tr>
+		<th></th>
+		<th ></th>
+	</tr>
+	<tr>
+	<th colspan="5"><input st-search="{{$ctrl.rowCollection}}" style="width:250px; float:right;" class="form-control" placeholder="global search ..." type="search"/></th>
+	</tr>
+	</thead>
+	<tbody>
+	<tr ng-repeat="$row in $ctrl.rowCollection"  >
+		<td >{{$row.timestamp}}</td>
+		<td ng-model="myProp" >{{$row}}"</td>
+		
+	
+	</tr>
+	</tbody>
+</table>
+</div>

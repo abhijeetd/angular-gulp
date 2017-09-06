@@ -1,0 +1,8 @@
+{
+ "/analytics/fleet": "/fleet",
+ "/analytics/fleetSuccess": "/fleetSuccess",
+ "/analytics/fleetFailed": "/fleetFailed",
+ "/analytics/devices": "/devices",
+ "/analytics/count": "/count",
+ "/analytics/events": "/events"
+}

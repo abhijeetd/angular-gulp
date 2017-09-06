@@ -1,0 +1,37 @@
+{
+  "name": "node-reporting-ui",
+  "version": "1.0.0",
+  "license": "private",
+  "private": true,
+  "author": "Neustar IoT Engineering",
+  "description": "Neustar IoT ",
+  "repository": {
+    "url": "https://github.com/OneID/node-reporting-ui"
+  },
+  "issues": {
+    "url": "https://github.com/OneID/node-reporting-ui/issues"
+  },
+  "homepage": "https://github.com/OneID/node-reporting-ui",
+  "main": "index.html",
+  "dependencies": {},
+  "scripts": {
+    "build": "npm install && npm run compile",
+    "compile": "webpack",
+    "clean": "rimraf dist",
+    "startDev": "better-npm-run startDev"
+  },
+  "betterScripts": {
+    "startDev": {
+      "command": "nodemon bin/server",
+      "env": {
+        "NODE_ENV": "development",
+        "DEBUG": "devServer"
+      }
+    }
+  },
+  "devDependencies": {
+    "angular": "^1.6.6",
+	"ui-bootstrap-tpls": "ui-bootstrap-tpls-2.5.0.js",
+    "node-sass": "^4.5.3"
+  }
+}
